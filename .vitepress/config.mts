@@ -47,7 +47,7 @@ export default defineConfig({
 
     footer: {
       message: "Released under the MIT License.",
-      copyright: "Copyright © 2026 Ebubekir Tabak",
+      copyright: "Copyright © 2026",
     },
   },
 });
