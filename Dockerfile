@@ -1,6 +1,7 @@
 # Build Stage
 FROM node:20-alpine as build-stage
 WORKDIR /app
+RUN apk add --no-cache git
 COPY package*.json ./
 RUN npm ci
 COPY . .
