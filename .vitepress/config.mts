@@ -39,6 +39,12 @@ export default defineConfig({
       provider: "local",
     },
 
+    editLink: {
+      pattern:
+        "https://github.com/ebubekirtabak/riflebird.dev/edit/master/:path",
+      text: "Edit this page on GitHub",
+    },
+
     footer: {
       message: "Released under the MIT License.",
       copyright: "Copyright © 2026 Ebubekir Tabak",
