@@ -3,6 +3,11 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   title: "Riflebird",
   description: "AI-driven test generation and execution platform.",
+  head: [["link", { rel: "icon", href: "/riflebird-logo.svg" }]],
+  lastUpdated: true,
+  sitemap: {
+    hostname: "https://riflebird.dev",
+  },
   themeConfig: {
     logo: {
       light: "/riflebird-logo.svg",
