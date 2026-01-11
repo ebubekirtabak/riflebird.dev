@@ -25,6 +25,31 @@ export default defineConfig({
         ] as HeadConfig[])
       : []),
   ],
+  transformHead: ({ pageData }) => {
+    const head: HeadConfig[] = [];
+    const title = pageData.frontmatter.title
+      ? `${pageData.frontmatter.title} | Riflebird`
+      : "Riflebird";
+    const description =
+      pageData.frontmatter.description ||
+      "AI-driven test generation and execution platform.";
+    const image = "https://riflebird.dev/riflebird-logo.svg";
+
+    head.push(["meta", { property: "og:title", content: title }]);
+    head.push(["meta", { property: "og:description", content: description }]);
+    head.push(["meta", { property: "og:image", content: image }]);
+    head.push(["meta", { property: "og:type", content: "website" }]);
+
+    head.push([
+      "meta",
+      { name: "twitter:card", content: "summary_large_image" },
+    ]);
+    head.push(["meta", { name: "twitter:title", content: title }]);
+    head.push(["meta", { name: "twitter:description", content: description }]);
+    head.push(["meta", { name: "twitter:image", content: image }]);
+
+    return head;
+  },
   lastUpdated: true,
   sitemap: {
     hostname: "https://riflebird.dev",
